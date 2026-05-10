@@ -37,3 +37,6 @@ Desktop.ini
 *.log
 *.sqlite
 *.db
+
+# Local Portfolio Blueprint
+alexus_portfolio_blueprint.md

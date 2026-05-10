@@ -476,38 +476,42 @@ async function sendMessage() {
     const input = document.getElementById('messageInput');
     const text = input.value.trim();
 
-    if (!text) return;
+    if (!text && !currentUploadedFile) return;
 
+    const messageText = text || "Analyze this attached file.";
     input.value = '';
     currentInputType = 'text';
 
     // Check if asking about screen - auto-capture if needed
-    if (isScreenQuery(text) && !currentUploadedFile) {
-        addMessage('user', text);
+    if (isScreenQuery(messageText) && !currentUploadedFile) {
+        addMessage('user', messageText);
         addMessage('system', '📸 Auto-capturing screen...');
         updateStatus('CAPTURING', '#00d9ff');
 
         const screenshot = await captureScreen();
         if (screenshot) {
             updateStatus('PROCESSING', '#00d9ff');
-            const response = await processQuery(text, 'vision', screenshot);
+            const response = await processQuery(messageText, 'vision', screenshot);
             addMessage('alexus', response);
         } else {
-            addMessage('system', '❌ Screen capture failed. Please try the SCREEN button.');
+            addMessage('system', '❌ Screen capture failed. Please try again.');
         }
         updateStatus('READY', '#00ff41');
         return;
     }
 
-    addMessage('user', text);
-
-    // Clear file indicator after sending
-    removeAttachment();
-
+    addMessage('user', messageText);
     updateStatus('PROCESSING', '#00d9ff');
 
-    const taskType = detectTaskType(text);
-    const response = await processQuery(text, taskType);
+    let taskType = detectTaskType(messageText);
+    if (currentUploadedFile && currentUploadedFile.isImage) {
+        taskType = 'vision';
+    }
+
+    const response = await processQuery(messageText, taskType);
+
+    // Clear file indicator after sending completes
+    removeAttachment();
 
     addMessage('alexus', response);
     updateStatus('READY', '#00ff41');
