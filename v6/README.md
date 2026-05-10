@@ -111,7 +111,7 @@ npm start
 * **Desktop**: Electron, Node.js IPC, Express, Axios, child_process
 * **Renderer HUD**: HTML5, Vanilla CSS, Three.js (custom fragment shaders)
 * **Voice Engine**: Python 3, Flask, CORS, SpeechRecognition, gTTS, Pygame
-* **AI Model Engine**: Google Gemini Developer API (using `gemini-1.5-flash` as default for speed, and `gemini-1.5-pro` for deep reasoning & screen vision)
+* **AI Model Engine**: Google Gemini Developer API (using `gemini-2.5-flash` as default for speed, and `gemini-2.5-pro` for deep reasoning & screen vision)
 
 ---
 

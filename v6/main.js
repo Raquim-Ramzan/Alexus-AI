@@ -55,10 +55,10 @@ function createExpressServer() {
                 return res.json({ success: true, response: commandResult.message, isCommand: true });
             }
 
-            // Route to appropriate AI (using 1.5 models for maximum backwards compatibility with older API keys)
-            let model = "gemini-1.5-flash"; // Default
+            // Route to appropriate AI (using Gemini 2.5 models for maximum performance and intelligence)
+            let model = "gemini-2.5-flash"; // Default
             if (query.toLowerCase().match(/use pro|switch to pro|with pro|gemini pro/i) || forceModel === 'pro') {
-                model = "gemini-1.5-pro";
+                model = "gemini-2.5-pro";
             }
 
             const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_API_KEY}`;

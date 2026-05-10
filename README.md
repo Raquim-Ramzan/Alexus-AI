@@ -17,7 +17,7 @@ This portfolio repository is organized chronologically to demonstrate progressio
 *   [**v5 — Automation Core**](./v5/): Integration of basic OS command listeners (volume, brightness, power).
 *   [**v6 — Production-Ready Stable (Latest & Recommended)**](./v6/):
     *   **Architecture**: Decoupled multi-process model (Electron Main + Preload Context Bridge + local Express Router + Flask Python Audio Subprocess).
-    *   **Models**: Powered by highly compatible, ultra-fast `gemini-1.5-flash` and `gemini-1.5-pro` multimodal engines.
+    *   **Models**: Powered by the state-of-the-art, production-ready `gemini-2.5-flash` and `gemini-2.5-pro` multimodal engines.
     *   **Core Assets**: Pruned of all mock/incomplete features, leaving a robust, bulletproof production codebase.
 
 ---
