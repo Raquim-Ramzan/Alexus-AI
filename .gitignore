@@ -1,0 +1,39 @@
+# Secrets - NEVER COMMIT TO GITHUB
+API_Keys.env
+.env
+*.env
+*.key
+*.pem
+
+# Dependencies
+node_modules/
+package-lock.json (if you want fresh installs, but usually we ignore it for simple apps or commit it. Let's keep lockfile committed but ignore venv)
+venv/
+.venv/
+env/
+python-env/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Electron Build outputs
+out/
+dist/
+build/
+bin/
+
+# OS/System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs and databases
+*.log
+*.sqlite
+*.db

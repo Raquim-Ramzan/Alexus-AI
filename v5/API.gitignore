@@ -1,0 +1,18 @@
+# API Keys - NEVER COMMIT!
+API_Keys.env
+.env
+*.env
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+# 📋 ALEXUS V5 - Complete Development Brief
+
+## 🎯 Project Overview
+**ALEXUS V5** is a desktop AI assistant built with Electron, Node.js, Python, and Three.js featuring a sci-fi JARVIS-style interface with full system control, voice interaction, and AI capabilities.
+
+---
+
+## 🏗️ Architecture
+
+### Technology Stack:
+- **Frontend**: HTML, CSS, JavaScript, Three.js (3D sphere)
+- **Backend**: Node.js + Express (port 3737)
+- **Voice Service**: Python + Flask (port 5000)
+- **Desktop**: Electron (main process + renderer)
+- **AI Models**: 
+  - Gemini 2.5 Flash (default)
+  - Gemini 2.5 Pro (on request)
+  - Groq Llama 3.1 70B (coding)
+  - Imagen 4.0 (image generation)
+
+### File Structure:
+```
+alexus-v5/
+├── main.js
+├── app.js
+├── style.css
+├── index.html
+├── preload.js
+├── package.json
+├── voice_service_v5.py
+├── assets/
+icon.png
+tray-icon.png

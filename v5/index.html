@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEXUS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background effects -->
+    <div class="background-grid"></div>
+    <div class="vignette"></div>
+
+    <!-- Main container -->
+    <div class="main-container">
+
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-glow"></div>
+                    <h1 class="logo">ALEXUS</h1>
+                </div>
+            </div>
+
+            <button class="new-session-btn" onclick="newSession()">
+                <span class="btn-glow"></span>
+                <span class="btn-text">+ NEW SESSION</span>
+            </button>
+
+            <div class="sessions-label">SESSION HISTORY</div>
+
+            <div class="sessions-list" id="sessionsList">
+                <!-- Sessions populated by JS -->
+            </div>
+        </div>
+
+        <!-- Center - 3D Sphere -->
+        <div class="center-panel">
+            <div class="sphere-container">
+                <canvas id="sphereCanvas"></canvas>
+                <div class="sphere-status" id="sphereStatus">CLICK TO ACTIVATE</div>
+            </div>
+
+            <div class="controls-hint">
+                <p>Click sphere or press <span class="key">Alt</span> + <span class="key">PgUp</span> to activate voice
+                </p>
+                <p><span class="key">F11</span> for fullscreen • <span class="key">ESC</span> to exit</p>
+            </div>
+        </div>
+
+        <!-- Right Panel - Chat -->
+        <div class="right-panel">
+            <div class="chat-header">
+                <h2 class="chat-title" id="chatTitle">ALEXUS INTERFACE</h2>
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span id="statusText">READY</span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages populated by JS -->
+            </div>
+
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <input type="text" id="messageInput" placeholder="Enter command or question..."
+                        class="message-input" />
+                    <button class="send-btn" onclick="sendMessage()">
+                        <span class="btn-glow"></span>
+                        <span class="btn-text">⚡ SEND</span>
+                    </button>
+                    <button class="screen-btn" onclick="analyzeScreen()">
+                        <span class="btn-glow"></span>
+                        <span class="btn-text">📷 SCREEN</span>
+                    </button>
+                    <button class="upload-btn" onclick="uploadFile()">
+                        <span class="btn-glow"></span>
+                        <span class="btn-text">📎 FILE</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app_v5.js"></script>
+</body>
+
+</html>
