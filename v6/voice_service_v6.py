@@ -1,5 +1,5 @@
 """
-ALEXUS V5 Voice Service
+ALEXUS V6 Voice Service
 Complete voice handling backend
 Python controls everything - no browser audio
 """
@@ -142,11 +142,11 @@ def process():
 
 @app.route('/status', methods=['GET'])
 def status():
-    return jsonify({'status': 'running', 'service': 'ALEXUS V5 Voice Service'})
+    return jsonify({'status': 'running', 'service': 'ALEXUS V6 Voice Service'})
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("  ALEXUS V5 VOICE SERVICE")
+    print("  ALEXUS V6 VOICE SERVICE")
     print("=" * 60)
     print("  Port: 5000")
     print("  gTTS: Ready")

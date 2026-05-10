@@ -1,5 +1,5 @@
 // ========================================
-// ALEXUS V5 - Enhanced with File Upload & Image Generation
+// ALEXUS V6 - Interactive WebGL HUD with System Control and Multimodal Vision
 // CLEANED VERSION - No Duplicates
 // ========================================
 

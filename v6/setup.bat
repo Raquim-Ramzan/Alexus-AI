@@ -1,6 +1,6 @@
 @echo off
 echo ================================================
-echo    ALEXUS V5 - Setup Script
+echo    ALEXUS V6 - Setup Script
 echo ================================================
 echo.
 

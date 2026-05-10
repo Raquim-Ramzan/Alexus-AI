@@ -466,7 +466,7 @@ function createWindow() {
 function createTray() {
     const trayIconPath = path.join(__dirname, 'assets', 'tray-icon.png');
     tray = new Tray(trayIconPath);
-    tray.setToolTip('ALEXUS V5 - AI Assistant');
+    tray.setToolTip('ALEXUS V6 - AI Assistant');
     updateTrayMenu('idle');
 
     tray.on('double-click', () => {
@@ -479,7 +479,7 @@ function createTray() {
 
 function updateTrayMenu(status = 'idle') {
     const contextMenu = Menu.buildFromTemplate([
-        { label: '⚡ ALEXUS V5', enabled: false },
+        { label: '⚡ ALEXUS V6', enabled: false },
         { label: `Status: ${status.toUpperCase()}`, enabled: false },
         { type: 'separator' },
         { label: '🖥️  Show Window', click: () => { if (mainWindow) { mainWindow.show(); mainWindow.focus(); } } },
@@ -557,7 +557,7 @@ ipcMain.on('update-tray-status', (event, status) => {
 // App lifecycle
 app.whenReady().then(() => {
     console.log('='.repeat(60));
-    console.log('  🚀 ALEXUS V5 - FULL SYSTEM CONTROL');
+    console.log('  🚀 ALEXUS V6 - FULL SYSTEM CONTROL');
     console.log('='.repeat(60));
     console.log(`  API Keys: ${GEMINI_API_KEY ? '✅ Loaded' : '❌ Missing'}`);
     console.log('='.repeat(60));
